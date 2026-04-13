@@ -348,70 +348,32 @@ int main() {
 //ex45
 
 void cedulas(int v){
-	int cem=v/100;
-	cout<<cem;
-	
-	int cinq=(v%100)/50;
-	cout<<cinq;
-	
-	int dez=((v%100)%50)/10;
-	cout<<dez;
-	
-	int cin=(((v%100)%50)%10)/5;
-	cout<<cin;
+  int cem=v/100;
+  cout<<"Notas de cem: "<<cem<<endl;
+
+  int cinq=(v%100)/50;
+  cout<<"Notas de cinquenta: "<<cinq<<endl;
+
+  int dez=((v%100)%50)/10;
+  cout<<"Notas de dez: "<<dez<<endl;
+
+  int cin=(((v%100)%50)%10)/5;
+  cout<<"Notas de cinco: "<<cin<<endl;
+
+  int um=((((v%100)%50)%10)%5)/1;
+  cout<<"Moedas de 1: "<<um;
 }
 
 int main(){
-	int v;
-	
-	cout<<"Informe um valor em R$: ";
-	cin>>v;
-	
-	cedulas(v);
-	
-	return 0;
+  int v;
+
+  cout<<"Informe um valor em R$: ";
+  cin>>v;
+
+  cedulas(v);
+
+  return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
