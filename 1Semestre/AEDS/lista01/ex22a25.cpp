@@ -95,7 +95,7 @@ int main(){
 */
 
 //25
-
+/*
 bool verificaTriangulo(){
     float a1, a2, a3;
     cout << "Informe o angulo 1:";
@@ -124,3 +124,4 @@ int main(){
 
     return 0;
 }
+*/
