@@ -273,75 +273,71 @@ int main(){
 #include <iostream>
 using namespace std;
 
-void conjunto(int i,float a,float b,float c){
-	float menor,meio,maior;
+void ordem(int i, float a, float b, float c){
+	float maior, meio, menor;
+	if(a>=b && a>=c){
+		maior=a;
+		if(b>=c){
+			meio=b;
+			menor=c;
+		}else{
+			meio=c;
+			menor=b;
+		}
+	}else if(b>=a && b>=c){
+		maior=b;
+		if(a>=c){
+			meio=a;
+			menor=c;
+		}else{
+			meio=c;
+			menor=a;
+		}
+	}else{
+		maior=c;
+		if(a>=b){
+			meio=a;
+			menor=b;
+		}else{
+			meio=b;
+			menor=a;
+		}
+	}
 	
-	// Descobrindo menor, meio e maior
-    if (a <= b && a <= c) {
-        menor = a;
-        if (b <= c) {
-            meio = b;
-            maior = c;
-        } else {
-            meio = c;
-            maior = b;
-        }
-    } else if (b <= a && b <= c) {
-        menor = b;
-        if (a <= c) {
-            meio = a;
-            maior = c;
-        } else {
-            meio = c;
-            maior = a;
-        }
-    } else {
-        menor = c;
-        if (a <= b) {
-            meio = a;
-            maior = b;
-        } else {
-            meio = b;
-            maior = a;
-        }
-    }
-
-    switch (i){
+	switch(i){
 		case 1:
-			i == 1;
-        	cout << "Ordem crescente: " << menor << " " << meio << " " << maior << endl;
-        	break;
-		
-		case 2:
-			i == 2;
-        	cout << "Ordem decrescente: " << maior << " " << meio << " " << menor << endl;
-        	break;
-
-    	case 3:
-			i == 3;
-			cout<<"Maior no meio: "<<menor<<" "<<maior<<" "<<meio<<endl;
+			cout<<"Crescente "<<menor<<", "<<meio<<", "<<maior;
 			break;
-			
+		case 2:
+			cout<<"Decrescente "<<maior<<", "<<meio<<", "<<menor;
+			break;
+		case 3:
+			cout<<"Maior no meio "<<meio<<", "<<maior<<", "<<menor;
+			break;
 		default:
-			cout<<"Valor de i invalido!"<<endl;
-    }
-	
+			cout<<"Valor invalido";
+	}
 }
 
-int main() {
+int main(){
+	int i;
+	float a,b,c;
 	
-    int i;
-    float a, b, c;
-
-    cout<<"Digite i (1, 2 ou 3): ";
-    cin>>i;
-
-    cout<<"Digite os valores de a, b e c: ";
-    cin>>a>>b>>c;
-    
-    conjunto(i,a,b,c);
-
-    return 0;
+	cout<<"Informe um número inteiro e positivo: ";
+	cin>>i;
+	
+	cout<<"Informe outro numero qualquer: ";
+	cin>>a;
+	
+	cout<<"Outro: ";
+	cin>>b;
+	
+	cout<<"Outro: ";
+	cin>>c;
+	
+	ordem(i,a,b,c);
+	
+	return 0;
 }
 */
 
