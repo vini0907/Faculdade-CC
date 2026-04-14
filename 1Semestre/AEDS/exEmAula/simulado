@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+
+void codigo(){
+	cout<<"   MODELO   |  CODIGO"<<endl;
+	cout<<"   SEDAN    |    S   "<<endl;
+	cout<<"CONVERSIVEL |    C   "<<endl;
+	cout<<"  POPULAR   |    P   "<<endl;
+}
+
+void precoNovo(string c, float pa){
+	int n;
+	float pn;
+	if(c=="S"){
+		n=1;
+		
+	}else if(c=="C"){
+		n=2;
+		
+	}else if(c=="P"){
+		n=3;
+	}
+	
+	switch(n){
+		case 1:
+			if(pa<150000){
+				pn=pa*1.11;
+			}else{
+				pn=pa*1.07;
+			}
+			break;
+			
+		case 2:
+			if(pa<100000){
+				pn=pa*1.09;
+			}else{
+				pn=pa;
+			}
+			break;
+			
+		case 3:
+			pn=pa*1.04;
+			break;
+			
+		default:
+			pn=pa*1.05;
+			break;
+	}
+	cout<<"O novo preco do carro e: "<<pn;
+}
+
+int main(){
+	string c;
+	float pa;
+	
+	codigo();
+	
+	cout<<"Informe o codigo do carro: ";
+	cin>>c;
+	
+	cout<<"Informe o preco do carro: ";
+	cin>>pa;
+	
+	precoNovo(c,pa);
+	
+	return 0;
+}
